@@ -87,7 +87,7 @@ func gl_set_window_title display,title
 	al_set_window_title(display,title)
 
 func gl_set_window_icon display,icon
-	al_set_display_icon(display,gl_load_bitmap(icon))
+	al_set_display_icon(display,icon)
 
 func gl_create_display screen_w,screen_h
 	return al_create_display(screen_w,screen_h)
@@ -244,3 +244,6 @@ func gl_draw_point x,y,color
 
 func gl_errormsg cMessage 
 	al_show_native_message_box(NULL,"Game","Error",cMessage,NULL,ALLEGRO_MESSAGEBOX_ERROR)
+
+func gl_delay x
+	al_rest(x/1000)
