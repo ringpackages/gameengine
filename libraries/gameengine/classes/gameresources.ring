@@ -4,7 +4,7 @@ class resources
 	afonts = []
 
 	func checkFile cFileName
-		if ! fexists(cFileName)
+		if ! util_fexists(cFileName)
 			? "File doesn't exist: " + cFileName
 			gl_exit()
 		ok
